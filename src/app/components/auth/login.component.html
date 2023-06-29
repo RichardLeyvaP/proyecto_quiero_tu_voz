@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="tw-flex tw-items-center tw-justify-center tw-h-screen">
+    <div class="tw-w-11/12 sm:tw-w-10/12 md:tw-w-5/6 lg:tw-w-2/4 xl:tw-w-3/6 2xl:tw-w-6/12">
+        <div>
+            <div>QtokeSoft Wage</div>
+            <div>Web</div>
+            <img mat-card-avatar src="/assets/img/saco-monedas.png" />
+        </div>
+        <form [formGroup]="authService.form" class="ceu-form" (ngSubmit)="login()">
+            <div align="center">
+
+                <div appearance="fill" class="form-field tw-w-full">
+                    <div>Usuario</div>
+                    <input matInput formControlName="email" placeholder="Su correo electrónico">
+                    <div matSuffix fontSet="fa-solid" fontIcon="fa-at"></div>
+                </div>
+                <div appearance="fill" class="form-field tw-w-full">
+                    <div>Contraseña</div>
+                    <input matInput formControlName="password" type="password" placeholder="Su contraseña">
+                    <div matSuffix fontSet="fa-solid" fontIcon="fa-lock-open"></div>
+                </div>
+                <div class="tw-flex tw-items-start">
+                    <mat-checkbox formControlName="remember">Recuerdame</mat-checkbox>
+                </div>
+
+            </div>
+            <div align="end">
+                <button mat-flat-button color="primary" [disabled]="authService.form.invalid"
+                    type="submit">Entrar</button>
+            </div>
+            <div>
+                <div mode="indeterminate" *ngIf="formRequestActive"></div>
+            </div>
+        </form>
+    </div>
+</div>
