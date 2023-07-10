@@ -25,7 +25,8 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/img"
             ],
             "styles": [
               "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css",
@@ -97,7 +98,8 @@
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/assets/img"
             ],
             "styles": [
               "./node_modules/@fortawesome/fontawesome-free/css/fontawesome.min.css",
@@ -111,5 +113,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "7fd1ee11-8ea6-4dc1-8974-c65499236e2a"
   }
 }

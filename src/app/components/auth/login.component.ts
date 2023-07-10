@@ -10,7 +10,7 @@ import { ErrorHandlerService } from 'src/app/services/error-handler.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  avatarURL:string="assets/img/locutoreslogo.png"
   formRequestActive = false;
 
   constructor(protected authService: AuthService, private constants: AppConstantsService, private errorService: ErrorHandlerService, private routerService: Router) { }
